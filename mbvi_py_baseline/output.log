@@ -1,0 +1,59 @@
+======================================================================
+MBVI INFERENCE PIPELINE
+======================================================================
+
+Configuration:
+  Birth rate (c1): 5.0
+  Death rate (c2): 0.1
+  Time horizon (T): 25.0
+  Initial population: 0
+  Observations at: [ 5. 10. 15. 20. 25.]
+  Observation noise: 5.0
+
+[1/6] Simulating true trajectory (Gillespie)...
+  Generated 212 events
+
+[2/6] Generating observations...
+  True values at obs times: [19.9201102  41.54292391 43.2919955  44.50515781 40.        ]
+  Observed values: [21.20710983 37.00051675 41.39947997 41.83057982 44.29036673]
+
+[3/6] Setting up observation model...
+
+[4/6] Computing prior trajectory...
+
+[5/6] Running variational optimization...
+
+Optimizing variational parameters:
+  Time points: 100
+  Iterations: 30
+  Learning rate: 0.05
+  Iter   0: Objective =      0.851, KL =    0.000, LogLik =   -0.851
+  Iter   5: Objective =      0.664, KL =    0.022, LogLik =   -0.642
+  Iter  10: Objective =      0.624, KL =    0.036, LogLik =   -0.589
+  Iter  15: Objective =      0.613, KL =    0.042, LogLik =   -0.571
+  Iter  20: Objective =      0.609, KL =    0.045, LogLik =   -0.564
+  Iter  25: Objective =      0.608, KL =    0.046, LogLik =   -0.561
+  Final objective: 0.607
+
+[6/6] Computing posterior trajectory...
+
+======================================================================
+RESULTS SUMMARY
+======================================================================
+
+Prior RMSE:        2.917
+Posterior RMSE:    2.366
+Improvement:       18.9%
+Noise level (σ):   5.000
+Posterior RMSE/σ:  0.473
+✓ Posterior residuals within noise level
+
+✓ Results saved to: results/mbvi_results.pkl
+✓ Summary saved to: results/mbvi_results.json
+
+======================================================================
+INFERENCE COMPLETE
+======================================================================
+
+Next step: Run visualization script
+  python run/visualize_results.py
