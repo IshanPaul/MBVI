@@ -1,0 +1,25 @@
+{
+  "config": {
+    "c1": 5.0,
+    "c2": 0.1,
+    "T": 25.0,
+    "x0": 0,
+    "obs_times": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0
+    ],
+    "obs_std": 5.0,
+    "seed": 42,
+    "n_time_points": 100,
+    "n_iter": 30,
+    "learning_rate": 0.05
+  },
+  "statistics": {
+    "prior_rmse": 2.9167147058084466,
+    "posterior_rmse": 2.365813048550878,
+    "improvement_percent": 18.887745728455506
+  }
+}

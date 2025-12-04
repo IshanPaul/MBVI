@@ -1,0 +1,17 @@
+# ============================================================================
+# FILE: requirements.txt
+# ============================================================================
+# Core dependencies for MBVI implementation
+numpy>=1.20.0
+scipy>=1.7.0
+matplotlib>=3.3.0
+
+# Optional: for profiling and performance analysis
+snakeviz>=2.1.0
+
+# Optional: for Jupyter notebooks (if you want to create one)
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Optional: for future NumPy optimization
+# numba>=0.54.0
